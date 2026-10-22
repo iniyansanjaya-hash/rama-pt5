@@ -59,6 +59,14 @@ body {
 }
 
 /* --- STYLE 1: LOCK SCREEN --- */
+/* --- STYLE 1: LOCK SCREEN --- */
+/* Modifikasi layout lock screen agar menyusun rapi dari atas */
+#lock-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 .lock-header {
     text-align: center;
     margin-top: 10px;
@@ -67,13 +75,15 @@ body {
 .lock-date { font-size: 20px; font-weight: 500; }
 .lock-time { font-size: 80px; font-weight: 200; line-height: 1; margin-top: 5px; }
 
+/* PERBAIKAN: margin-top diganti menjadi 30px agar naik tepat di bawah jam */
 .notif-container {
     display: flex;
     flex-direction: column;
     gap: 12px;
     margin-top: 30px;
-    margin-bottom: 08px;
-}
+    margin-bottom: 20px;
+    width: 100%;
+    }
 
 .notif-box, .music-player {
     background: rgba(255, 255, 255, 0.22);
@@ -101,7 +111,14 @@ body {
 .music-artist { font-size: 12px; opacity: 0.7; }
 .music-controls { display: flex; gap: 14px; font-size: 18px; }
 
-.lock-footer { text-align: center; cursor: pointer; padding-bottom: 5px; animation: bounce 2s infinite; }
+/* PERBAIKAN: Ditambahkan margin-top: auto agar footer tetap mengunci di bawah layar */
+.lock-footer { 
+    text-align: center; 
+    cursor: pointer; 
+    padding-bottom: 5px; 
+    animation: bounce 2s infinite; 
+    margin-top: auto; 
+                }
 .action-text { font-size: 12px; opacity: 0.8; margin-bottom: 8px; }
 .home-bar { width: 140px; height: 5px; background-color: #ffffff; border-radius: 10px; margin: 0 auto; }
 
